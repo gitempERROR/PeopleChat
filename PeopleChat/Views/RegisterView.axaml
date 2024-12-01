@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:PeopleChat.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PeopleChat.Views.RegisterView"
+			 x:DataType="vm:RegisterViewModel">
+	<Panel>
+		<Border Width="350"
+				Height="500"
+				Background="#ff494856"
+				CornerRadius="15"
+				BoxShadow="0 0 15 1 Black">
+			<StackPanel Margin="100, 50, 100, 50"
+						Width="300"
+						Orientation="Vertical"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						Spacing="20">
+				<TextBlock Classes="H1" Text="Регистрация" TextAlignment="Center"/>
+				<TextBlock Text="Логин"/>
+				<TextBox Classes="Auth" Text="{Binding Login}"/>
+				<TextBlock Text="Пароль"/>
+				<TextBox Classes="Auth" Text="{Binding Password}"/>
+				<TextBlock Text="Повторите пароль"/>
+				<TextBox Classes="Auth" Text="{Binding RepeatPassword}"/>
+				<Panel Height="30"/>
+				<StackPanel Orientation="Horizontal"
+							Spacing="20">
+					<Button HorizontalAlignment="Center" Width="60" CornerRadius="10" Command="{Binding NavigateToAuth}">
+						<TextBlock Text="Назад" TextAlignment="Center"/>
+					</Button>
+					<Button HorizontalAlignment="Center" Width="220" CornerRadius="10" Command="{Binding Register}">
+						<TextBlock Text="Зарегистрироваться" TextAlignment="Center"/>
+					</Button>
+				</StackPanel>
+			</StackPanel>
+		</Border>
+	</Panel>
+</UserControl>

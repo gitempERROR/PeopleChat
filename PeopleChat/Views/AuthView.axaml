@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:PeopleChat.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PeopleChat.Views.AuthView"
+			 x:DataType="vm:AuthViewModel">
+	<Panel>
+		<Border Width="350"
+				Height="400"
+				Background="#ff494856"
+				CornerRadius="15"
+				BoxShadow="0 0 15 1 Black">
+			<StackPanel Margin="100, 50, 100, 50"
+						Width="300"
+						Orientation="Vertical"
+						HorizontalAlignment="Center"
+						Spacing="20">
+				<TextBlock Classes="H1" Text="Вход" TextAlignment="Center"/>
+				<TextBlock Text="Логин"/>
+				<TextBox Classes="Auth" Text="{Binding Login}"/>
+				<TextBlock Text="Пароль"/>
+				<TextBox Classes="Auth" Text="{Binding Password}"/>
+				<Button HorizontalAlignment="Center" Background="Transparent" Command="{Binding NavigateToRegister}">
+					<TextBlock Text="Зарегистрироваться"/>
+				</Button>
+				<Button HorizontalAlignment="Center" Width="300" CornerRadius="10">
+					<TextBlock Text="Войти" TextAlignment="Center"/>
+				</Button>
+			</StackPanel>
+		</Border>
+	</Panel>
+</UserControl>
