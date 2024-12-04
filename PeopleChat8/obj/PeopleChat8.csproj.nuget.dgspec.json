@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ФадеевАВ\\source\\repos\\PeopleChat8\\PeopleChat8\\PeopleChat8.csproj": {}
+    "D:\\ФадеевАВ\\PeopleChat8\\PeopleChat8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ФадеевАВ\\source\\repos\\PeopleChat8\\PeopleChat8\\PeopleChat8.csproj": {
+    "D:\\ФадеевАВ\\PeopleChat8\\PeopleChat8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ФадеевАВ\\source\\repos\\PeopleChat8\\PeopleChat8\\PeopleChat8.csproj",
+        "projectUniqueName": "D:\\ФадеевАВ\\PeopleChat8\\PeopleChat8.csproj",
         "projectName": "PeopleChat8",
-        "projectPath": "C:\\Users\\ФадеевАВ\\source\\repos\\PeopleChat8\\PeopleChat8\\PeopleChat8.csproj",
+        "projectPath": "D:\\ФадеевАВ\\PeopleChat8\\PeopleChat8.csproj",
         "packagesPath": "C:\\Users\\ФадеевАВ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ФадеевАВ\\source\\repos\\PeopleChat8\\PeopleChat8\\obj\\",
+        "outputPath": "D:\\ФадеевАВ\\PeopleChat8\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

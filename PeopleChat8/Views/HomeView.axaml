@@ -8,11 +8,14 @@
              x:Class="PeopleChat8.Views.HomeView">
 	<DockPanel VerticalAlignment="Top">
 		<Menu DockPanel.Dock="Top">
-			<MenuItem Header="Профиль">
+			<MenuItem Header="Пользователь">
 				<MenuItem Header="Настройки"/>
 				<Separator/>
 				<MenuItem Header="Выйти"/>
 			</MenuItem>
 		</Menu>
+		<Grid ColumnDefinitions="200, *">
+			<ListBox Grid.Column="0" Classes="LeftMenu" ItemsSource="{Binding Users}"/>
+		</Grid>
 	</DockPanel>
 </UserControl>

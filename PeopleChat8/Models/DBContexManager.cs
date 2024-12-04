@@ -56,5 +56,10 @@ namespace PeopleChat8.Models
                 return null;
             }
         }
+
+        public static List<User> GetUsers() { 
+            List<User> users = [.. context.Users];
+            return users;
+        }
     }
 }

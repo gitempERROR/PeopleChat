@@ -1,9 +1,9 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="PeopleChat8.App"
+			 xmlns:vm="using:PeopleChat8.ViewModels"
              xmlns:local="using:PeopleChat8"
              RequestedThemeVariant="Dark">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
         <local:ViewLocator/>
@@ -16,13 +16,28 @@
 				<ColorPaletteResources x:Key="Dark" Accent="#ffe84545" AltHigh="Black" AltLow="Black" AltMedium="Black" AltMediumHigh="Black" AltMediumLow="Black" BaseHigh="White" BaseLow="#ff52a08d" BaseMedium="#ff9ed2c7" BaseMediumHigh="#ffb1dfd5" BaseMediumLow="#ff78b9aa" ChromeAltLow="#ffb1dfd5" ChromeBlackHigh="Black" ChromeBlackLow="#ffb1dfd5" ChromeBlackMedium="Black" ChromeBlackMediumLow="Black" ChromeDisabledHigh="#ff52a08d" ChromeDisabledLow="#ff9ed2c7" ChromeGray="#ff8bc6b8" ChromeHigh="#ff8bc6b8" ChromeLow="#ff105843" ChromeMedium="#ff216a55" ChromeMediumLow="#ff428e7a" ChromeWhite="White" ListLow="#ff216a55" ListMedium="#ff52a08d" RegionColor="#ff292836" />
 			</FluentTheme.Palettes>
 		</FluentTheme>
+		
 		<Style Selector="TextBox.Auth /template/ Border">
-			<Setter Property="CornerRadius" Value="15, 15, 15, 15"/>
-			<Setter Property="BorderThickness" Value="3"/>
+			<Setter Property="CornerRadius"        Value="15, 15, 15, 15"/>
+			<Setter Property="BorderThickness"     Value="3"/>
 		</Style>
+		
 		<Style Selector="TextBlock.H1">
-			<Setter Property="FontSize" Value="24"/>
-			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="FontSize"            Value="24"/>
+			<Setter Property="FontWeight"          Value="Bold"/>
 		</Style>
-    </Application.Styles>
+
+		<Style Selector="ListBox.LeftMenu">
+			<Setter Property="ItemTemplate">
+				<DataTemplate DataType="{x:Type vm:MenuElement}">
+					<TextBlock Text="{Binding UserData.UserFirstname}"/>
+				</DataTemplate>
+			</Setter>
+		</Style>
+
+		<Style Selector="ListBox.Horizontal /template/ VirtualizingStackPanel">
+			<Setter Property="Orientation"         Value="Horizontal"/>
+		</Style>
+
+	</Application.Styles>
 </Application>
