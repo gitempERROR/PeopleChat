@@ -19,7 +19,7 @@ public partial class User
 
     public DateOnly? BirthDate { get; set; }
 
-    public virtual Auth? Auth { get; set; }
+    public virtual AuthDto? Auth { get; set; }
 
     public virtual Gender? Gender { get; set; }
 

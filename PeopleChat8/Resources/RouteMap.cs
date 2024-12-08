@@ -10,9 +10,10 @@ namespace PeopleChat8.Resources
         {
             Routes = new()
             {
-                { RouteNames.Auth,     new AuthViewModel() },
-                { RouteNames.Register, new RegisterViewModel() },
-                { RouteNames.Home,     new HomeViewModel() },
+                { RouteNames.Auth,         new AuthViewModel() },
+                { RouteNames.Register,     new RegisterViewModel() },
+                { RouteNames.Home,         new HomeViewModel() },
+                { RouteNames.RegisterUser, new RegisterUserViewModel() },
             };
         }
         public Dictionary<String, ViewModelBase> Routes { get; }
@@ -20,9 +21,10 @@ namespace PeopleChat8.Resources
 
     public static class RouteNames
     {
-        public static readonly String Auth = "Auth";
-        public static readonly String Register = "Register";
-        public static readonly String Home = "Home";
+        public static readonly String Auth         = "Auth";
+        public static readonly String Register     = "Register";
+        public static readonly String Home         = "Home";
+        public static readonly String RegisterUser = "RegisterUser";
     }
 
     public class NavigationEventArgs : EventArgs

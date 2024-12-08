@@ -62,22 +62,14 @@ namespace PeopleChat8.ViewModels
             NavigateToRoute(new NavigationEventArgs(RouteNames.Auth));
         }
 
-        public void NavigateToHome()
+        public void NavigateToRegisterUser()
         {
-            NavigateToRoute(new NavigationEventArgs(RouteNames.Home));
+            NavigateToRoute(new NavigationEventArgs(RouteNames.RegisterUser));
         }
 
         public void Register()
         {
-            if (Login == "") return;
-            if (Password != RepeatPassword || Password == "") return;
-            byte[] encryptedPassword = Encryption.Encrypt(Password);
-            DBContexManager.CreateNewUser(Login, encryptedPassword);
-            User? user = DBContexManager.LogIn(Login, encryptedPassword);
-            if (user != null)
-            {
-                NavigateToHome();
-            }
+            NavigateToRegisterUser();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace PeopleChat8.ViewModels
 	public partial class HomeViewModel : ViewModelBase
 	{
 		public HomeViewModel() { 
-			users = DBContexManager.GetUsers().Select(user => new MenuElement(user)).ToList();
+			users = [];
 		}
 
 		[ObservableProperty]

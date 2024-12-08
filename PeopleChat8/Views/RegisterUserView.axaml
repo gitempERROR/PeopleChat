@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:PeopleChat8.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PeopleChat8.Views.RegisterUserView"
+			 x:DataType="vm:RegisterUserViewModel">
+	<Panel VerticalAlignment="Stretch">
+		<Border Width="350"
+				Height="500"
+				Background="#ff494856"
+				CornerRadius="15"
+				BoxShadow="0 0 15 1 Black"
+				VerticalAlignment="Center">
+			<StackPanel Margin="100, 50, 100, 50"
+						Width="300"
+						Orientation="Vertical"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						Spacing="20">
+				<TextBlock Classes="H1" Text="Создание пользователя" TextAlignment="Center"/>
+				<TextBlock Text="Имя"/>
+				<TextBox Classes="Auth" Text="{Binding FirstName}"/>
+				<TextBlock Text="Фамилия"/>
+				<TextBox Classes="Auth" Text="{Binding LastName}"/>
+				<Panel Height="30"/>
+				<StackPanel Orientation="Horizontal"
+							Spacing="20">
+					<Button HorizontalAlignment="Center" Width="60" CornerRadius="10" Command="{Binding NavigateToAuth}">
+						<TextBlock Text="Назад" TextAlignment="Center"/>
+					</Button>
+					<Button HorizontalAlignment="Center" Width="220" CornerRadius="10" IsEnabled="{Binding IsEnabled}" Command="{Binding Register}">
+						<TextBlock Text="Зарегистрироваться" TextAlignment="Center"/>
+					</Button>
+				</StackPanel>
+			</StackPanel>
+		</Border>
+	</Panel>
+</UserControl>

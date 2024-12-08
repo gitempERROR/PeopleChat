@@ -23,21 +23,26 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PeopleChat8
-build_property.ProjectDir = D:\ФадеевАВ\PeopleChat8\
+build_property.ProjectDir = C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[D:/ФадеевАВ/PeopleChat8/App.axaml]
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/ФадеевАВ/PeopleChat8/Views/AuthView.axaml]
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/AuthView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/ФадеевАВ/PeopleChat8/Views/HomeView.axaml]
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/HomeView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/ФадеевАВ/PeopleChat8/Views/MainWindow.axaml]
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/ФадеевАВ/PeopleChat8/Views/RegisterView.axaml]
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/RegisterUserView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/RegisterView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

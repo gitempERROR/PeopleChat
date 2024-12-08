@@ -9,5 +9,5 @@ public partial class Role
 
     public string RoleName { get; set; } = null!;
 
-    public virtual ICollection<Auth> Auths { get; set; } = new List<Auth>();
+    public virtual ICollection<AuthDto> Auths { get; set; } = new List<AuthDto>();
 }
