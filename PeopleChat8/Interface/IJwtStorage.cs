@@ -9,7 +9,7 @@ namespace PeopleChat8.Interface
 {
     public interface IJwtStorage
     {
-        string GetToken();
+        string? GetToken();
         void SaveToken(JwtEventArgs e);
         void RemoveToken();
     }

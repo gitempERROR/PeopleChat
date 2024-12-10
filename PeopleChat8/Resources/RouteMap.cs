@@ -14,6 +14,7 @@ namespace PeopleChat8.Resources
                 { RouteNames.Register,     new RegisterViewModel() },
                 { RouteNames.Home,         new HomeViewModel() },
                 { RouteNames.RegisterUser, new RegisterUserViewModel() },
+                { RouteNames.Settings,     new SettingsViewModel() },
             };
         }
         public Dictionary<String, ViewModelBase> Routes { get; }
@@ -25,6 +26,7 @@ namespace PeopleChat8.Resources
         public static readonly String Register     = "Register";
         public static readonly String Home         = "Home";
         public static readonly String RegisterUser = "RegisterUser";
+        public static readonly String Settings     = "Settings";
     }
 
     public class NavigationEventArgs : EventArgs

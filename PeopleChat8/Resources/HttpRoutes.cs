@@ -11,5 +11,6 @@ namespace PeopleChat8.Resources
     {
         public static readonly string Login = "http://127.0.0.1:5001/api/Auth/Login";
         public static readonly string Register = "http://127.0.0.1:5001/api/Auth/Register";
+        public static readonly string UserList = "http://127.0.0.1:5001/api/Users";
     }
 }

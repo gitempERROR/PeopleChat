@@ -5,11 +5,13 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System;
+using PeopleChat8.Services;
+using PeopleChat8.Interface;
 
 namespace PeopleChat8.ViewModels
 {
-	public partial class RegisterViewModel : ViewModelBase
-	{
+	public partial class RegisterViewModel : ViewModelBase, IUpdateViewModel
+    {
         [ObservableProperty]
         private string login = "";
 
@@ -21,6 +23,8 @@ namespace PeopleChat8.ViewModels
 
         [ObservableProperty]
         private bool isEnabled = false;
+
+        private InMemoryAuthStorage inMemoryAuthStorage = InMemoryAuthStorage.Instance;
 
         private readonly int loginMaxLenght = 30;
         private readonly int passwordMaxLenght = 150;
@@ -69,7 +73,11 @@ namespace PeopleChat8.ViewModels
 
         public void Register()
         {
+            AuthDto authDto = new(Login, Encryption.Encrypt(Password));
+            inMemoryAuthStorage.SaveAuthDto(authDto);
             NavigateToRegisterUser();
         }
+
+        public void Update() { }
     }
 }

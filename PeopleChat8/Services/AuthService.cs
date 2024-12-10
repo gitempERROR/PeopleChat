@@ -16,14 +16,28 @@ namespace PeopleChat8.Services
     public class AuthService : IAuthService
     {
         public delegate void CurrentUserHandler(UserEventArgs e);
-        public event CurrentUserHandler userEvent;
+        public event CurrentUserHandler? userEvent;
 
         public delegate void JwtHandler(JwtEventArgs e);
-        public event JwtHandler jwtEvent;
+        public event JwtHandler? jwtEvent;
 
         private readonly HttpClient _httpClient = new HttpClient();
         private string jwt = "";
         public UserDto CurrentUser { get; set; } = null!;
+
+        private static AuthService? _instance;
+
+        public static AuthService Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new AuthService();
+                }
+                return _instance!;
+            }
+        }
 
         public async Task<bool> Auth(AuthDto loginData, bool register = false)
         {
@@ -53,8 +67,8 @@ namespace PeopleChat8.Services
                 jwt = deserializedResponse.AccessToken;
                 CurrentUser = deserializedResponse.UserData;
 
-                userEvent(new UserEventArgs(CurrentUser));
-                jwtEvent(new JwtEventArgs(jwt));
+                userEvent!(new UserEventArgs(CurrentUser));
+                jwtEvent!(new JwtEventArgs(jwt));
                 return true;
             }
 

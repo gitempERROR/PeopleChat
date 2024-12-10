@@ -24,6 +24,17 @@
 				<TextBox Classes="Auth" Text="{Binding FirstName}"/>
 				<TextBlock Text="Фамилия"/>
 				<TextBox Classes="Auth" Text="{Binding LastName}"/>
+				<Panel HorizontalAlignment="Stretch">
+					<StackPanel Spacing="20">
+						<TextBlock Text="Пол"/>
+						<ComboBox Classes="Register" Width="100" ItemsSource="{Binding GenderList}" SelectedItem="{Binding Gender}" Height="40"/>
+					</StackPanel>
+					<StackPanel Spacing="20">
+						<TextBlock Text="Дата рождения" HorizontalAlignment="Right"/>
+						<CalendarDatePicker HorizontalAlignment="Right" Height="40" SelectedDate="{Binding BirthDate}"/>
+					</StackPanel>
+				</Panel>
+				
 				<Panel Height="30"/>
 				<StackPanel Orientation="Horizontal"
 							Spacing="20">

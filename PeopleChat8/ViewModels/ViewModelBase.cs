@@ -8,11 +8,11 @@ namespace PeopleChat8.ViewModels
     public class ViewModelBase : ObservableObject
     {
         public delegate void NavigationHandler(NavigationEventArgs e);
-        public event NavigationHandler Navigate;
+        public event NavigationHandler? Navigate;
 
         protected virtual void NavigateToRoute(NavigationEventArgs e)
         {
-            Navigate(e);
+            Navigate!(e);
         }
     }
 }

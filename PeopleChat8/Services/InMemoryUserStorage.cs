@@ -11,7 +11,7 @@ namespace PeopleChat8.Services
 {
     public class InMemoryUserStorage : IUserStorage
     {
-        private static InMemoryUserStorage _instance;
+        private static InMemoryUserStorage? _instance;
         private UserDto? user;
 
         private InMemoryUserStorage() { }
@@ -31,6 +31,11 @@ namespace PeopleChat8.Services
         public UserDto? GetUser()
         {
             return user;
+        }
+
+        public void SaveUser(UserDto user)
+        {
+            this.user = user;
         }
 
         public void SaveUser(UserEventArgs e)

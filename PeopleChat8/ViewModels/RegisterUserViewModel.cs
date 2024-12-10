@@ -1,12 +1,17 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using PeopleChat8.Interface;
+using PeopleChat8.Models;
 using PeopleChat8.Resources;
+using PeopleChat8.Services;
 using System;
 using System.Collections.Generic;
 
 namespace PeopleChat8.ViewModels
 {
-	public partial class RegisterUserViewModel : ViewModelBase
+	public partial class RegisterUserViewModel : ViewModelBase, IUpdateViewModel
 	{
+        private AuthService? authService = AuthService.Instance;
+
         [ObservableProperty]
         private string firstName = "";
 
@@ -24,6 +29,11 @@ namespace PeopleChat8.ViewModels
 
         [ObservableProperty]
         private string gender = "";
+
+        [ObservableProperty]
+        private DateTime birthDate = DateTime.Now;
+
+        private InMemoryAuthStorage inMemoryAuthStorage = InMemoryAuthStorage.Instance;
 
         private readonly int firstNameMaxLenght = 50;
         private readonly int lastNameMaxLenght = 50;
@@ -53,16 +63,40 @@ namespace PeopleChat8.ViewModels
 
         public void NavigateToAuth()
         {
+            inMemoryAuthStorage.RemoveAuthDto();
             NavigateToRoute(new NavigationEventArgs(RouteNames.Auth));
         }
 
         public void NavigateToHome()
         {
+            inMemoryAuthStorage.RemoveAuthDto();
             NavigateToRoute(new NavigationEventArgs(RouteNames.Home));
         }
 
-        public void Register()
+        public async void Register()
         {
+            AuthDto authDto = inMemoryAuthStorage.GetAuthDto()!;
+            UserDto userDto = new()
+            {
+                UserFirstname = FirstName,
+                UserLastname = LastName,
+                Gender = Gender,
+                BirthDate = DateOnly.FromDateTime(BirthDate)
+            };
+
+            authDto.userData = userDto;
+
+            if (authService == null)
+                return;
+
+            bool result = await authService.Auth(authDto, register: true);
+
+            if (result)
+            {
+                NavigateToHome();
+            }
         }
+
+        public void Update() { }
     }
 }

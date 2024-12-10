@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:PeopleChat8.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             x:Class="PeopleChat8.Views.SettingsView"
+			 x:DataType="vm:SettingsViewModel">
+	<Border Background="#ff494856"
+			CornerRadius="0 15 15 0"
+			BoxShadow="0 0 15 1 Black"
+			Width="360"
+			HorizontalAlignment="Left">
+		<Grid Margin="20 20 20 20" ColumnDefinitions="130 200" RowDefinitions="70 * 30">
+			<TextBlock Classes="H1" Text="Настройки"/>
+			<StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" Margin="0 10 0 0">
+				<TextBlock Text="Фото" Height="200"/>
+				<TextBlock Text="Имя" Height="40"/>
+				<TextBlock Text="Фамилия" Height="40"/>
+				<TextBlock Text="Дата рождения" Height="40"/>
+			</StackPanel>
+			<StackPanel Grid.Column="1" Grid.Row="1" Spacing="10">
+				<Button Classes="Transparent" Width="200" CornerRadius="100" Command="{Binding Image}">
+					<Border Width="200" Height="200" CornerRadius="100" ClipToBounds="True">
+						<Image Stretch="UniformToFill" Source="{Binding CurrentUserImage}"/>
+					</Border>
+				</Button>
+				<TextBox Classes="Auth" Text="{Binding CurrentUser.UserFirstname}" Height="40"/>
+				<TextBox Classes="Auth" Text="{Binding CurrentUser.UserLastname}" Height="40"/>
+				<CalendarDatePicker Height="40" Width="200" Text="{Binding CurrentUser.BirthDate}"/>
+			</StackPanel>
+			<Button HorizontalAlignment="Right" Width="150" CornerRadius="10" IsEnabled="" Command="" Grid.Column="1" Grid.Row="2">
+				<TextBlock Text="Сохранить" TextAlignment="Center"/>
+			</Button>
+			<Button HorizontalAlignment="Left" Width="90" CornerRadius="10" IsEnabled="" Command="" Grid.Column="0" Grid.Row="2">
+				<TextBlock Text="Назад" TextAlignment="Center"/>
+			</Button>
+		</Grid>
+	</Border>
+</UserControl>

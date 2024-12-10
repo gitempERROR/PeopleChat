@@ -1,4 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using PeopleChat8.Interface;
 using PeopleChat8.Models;
 using PeopleChat8.Resources;
 using PeopleChat8.Services;
@@ -8,9 +9,9 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace PeopleChat8.ViewModels
 {
-    public partial class AuthViewModel : ViewModelBase
+    public partial class AuthViewModel : ViewModelBase, IUpdateViewModel
     {
-        public AuthService? AuthService { get; set; }
+        private AuthService? authService = AuthService.Instance;
 
         [ObservableProperty]
         private string login = "";
@@ -23,11 +24,6 @@ namespace PeopleChat8.ViewModels
 
         private readonly int loginMaxLenght = 30;
         private readonly int passwordMaxLenght = 150;
-
-        public void SetAuthService(AuthService authService)
-        {
-            AuthService = authService;
-        }
 
         partial void OnLoginChanged(string value)
         {
@@ -66,7 +62,7 @@ namespace PeopleChat8.ViewModels
         {
             byte[] EncryptedPassword = Encryption.Encrypt(Password);
 
-            if (AuthService == null)
+            if (authService == null)
                 return;
 
             AuthDto loginData = new
@@ -75,12 +71,14 @@ namespace PeopleChat8.ViewModels
                 EncryptedPassword
             );
 
-            bool result = await AuthService.Auth(loginData);
+            bool result = await authService.Auth(loginData);
 
             if (result)
             {
                 NavigateToHome();
             }
         }
+
+        public void Update() { }
     }
 }

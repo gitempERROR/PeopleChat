@@ -10,7 +10,7 @@ namespace PeopleChat8.Services
 {
     public class InMemoryJwtStorage : IJwtStorage
     {
-        private static InMemoryJwtStorage _instance;
+        private static InMemoryJwtStorage? _instance;
         private string? _token;
 
         private InMemoryJwtStorage() { } // Приватный конструктор

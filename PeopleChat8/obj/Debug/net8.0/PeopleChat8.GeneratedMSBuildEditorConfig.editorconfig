@@ -32,6 +32,9 @@ build_property.EnableCodeStyleSeverity =
 [C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Styles/Styles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/AuthView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -45,4 +48,7 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/RegisterView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Programming/Projects/C\#/PeopleChat8/PeopleChat8/Views/SettingsView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

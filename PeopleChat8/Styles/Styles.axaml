@@ -1,0 +1,66 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:vm="using:PeopleChat8.ViewModels"
+        xmlns:local="using:PeopleChat8">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith>
+
+  <!-- Add Styles Here -->
+	<FluentTheme>
+		<FluentTheme.Palettes>
+			<ColorPaletteResources x:Key="Light" Accent="#ffe84545" AltHigh="White" AltLow="White" AltMedium="White" AltMediumHigh="White" AltMediumLow="White" BaseHigh="Black" BaseLow="#ff52c18d" BaseMedium="#ff21844f" BaseMediumHigh="#ff005c26" BaseMediumLow="#ff10703b" ChromeAltLow="#ff005c26" ChromeBlackHigh="Black" ChromeBlackLow="#ff52c18d" ChromeBlackMedium="#ff005c26" ChromeBlackMediumLow="#ff21844f" ChromeDisabledHigh="#ff52c18d" ChromeDisabledLow="#ff21844f" ChromeGray="#ff10703b" ChromeHigh="#ff52c18d" ChromeLow="#ffb3ebd2" ChromeMedium="#ffa0e3c4" ChromeMediumLow="#ffb3ebd2" ChromeWhite="White" ListLow="#ffa0e3c4" ListMedium="#ff52c18d" RegionColor="#fffff3f4" />
+			<ColorPaletteResources x:Key="Dark" Accent="#ffe84545" AltHigh="Black" AltLow="Black" AltMedium="Black" AltMediumHigh="Black" AltMediumLow="Black" BaseHigh="White" BaseLow="#ff52a08d" BaseMedium="#ff9ed2c7" BaseMediumHigh="#ffb1dfd5" BaseMediumLow="#ff78b9aa" ChromeAltLow="#ffb1dfd5" ChromeBlackHigh="Black" ChromeBlackLow="#ffb1dfd5" ChromeBlackMedium="Black" ChromeBlackMediumLow="Black" ChromeDisabledHigh="#ff52a08d" ChromeDisabledLow="#ff9ed2c7" ChromeGray="#ff8bc6b8" ChromeHigh="#ff8bc6b8" ChromeLow="#ff105843" ChromeMedium="#ff216a55" ChromeMediumLow="#ff428e7a" ChromeWhite="White" ListLow="#ff216a55" ListMedium="#ff52a08d" RegionColor="#ff292836" />
+		</FluentTheme.Palettes>
+	</FluentTheme>
+
+	<Style Selector="TextBox.Auth /template/ Border">
+		<Setter Property="CornerRadius"        Value="15, 15, 15, 15"/>
+		<Setter Property="BorderThickness"     Value="3"/>
+	</Style>
+
+	<Style Selector="TextBlock.H1">
+		<Setter Property="FontSize"            Value="24"/>
+		<Setter Property="FontWeight"          Value="Bold"/>
+	</Style>
+
+	<Style Selector="ListBox.LeftMenu">
+		<Setter Property="ItemTemplate">
+			<DataTemplate DataType="{x:Type vm:MenuElement}">
+				<TextBlock Text="{Binding UserData.UserFirstname}"/>
+			</DataTemplate>
+		</Setter>
+	</Style>
+
+	<Style Selector="ListBox.Horizontal /template/ VirtualizingStackPanel">
+		<Setter Property="Orientation"         Value="Horizontal"/>
+	</Style>
+
+	<Style Selector="ComboBox.Register">
+		<Setter Property="CornerRadius" Value="15, 15, 15, 15"/>
+		<Setter Property="BorderThickness" Value="3"/>
+		<Setter Property="ItemTemplate">
+			<DataTemplate>
+				<TextBlock Text="{Binding}"/>
+			</DataTemplate>
+		</Setter>
+	</Style>
+
+	<Style Selector="CalendarDatePicker">
+		<Setter Property="CornerRadius" Value="15, 15, 15, 15"/>
+		<Setter Property="BorderThickness" Value="3"/>
+	</Style>
+
+	<Style Selector="Button.Transparent">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderThickness" Value="0"/>
+		<Setter Property="Padding" Value="0"/>
+		<Setter Property="Margin" Value="0"/>
+	</Style>
+
+	<Style Selector="Button.Transparent:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="#9952a08d"/>
+	</Style>
+</Styles>
