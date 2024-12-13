@@ -10,6 +10,6 @@ namespace PeopleChat8.Interface
     public interface IUserService
     {
         public Task<List<UserDto>> GetUserList(String Jwt);
-        public void UpdateUserData(String Jwt, UserDto userData);
+        public Task<Boolean> UpdateUserData(String Jwt, UserDto userData);
     }
 }

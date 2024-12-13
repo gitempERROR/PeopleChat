@@ -3,6 +3,7 @@ using PeopleChat8.Interface;
 using PeopleChat8.Models;
 using PeopleChat8.Resources;
 using PeopleChat8.Services;
+using PeopleChat8.ViewModels;
 using System;
 
 namespace PeopleChat8.ViewModels
@@ -38,21 +39,46 @@ namespace PeopleChat8.ViewModels
 
         [ObservableProperty]
         public ViewModelBase viewModel;
+        [ObservableProperty]
+        public ViewModelBase? viewModelSettings;
 
         partial void OnViewModelChanged(ViewModelBase value) 
-        { 
+        {
             ViewModel = value;
-            if (ViewModel is IUpdateViewModel updateViewModel) 
-            {
-                updateViewModel.Update();
-            }
+        }
+
+        partial void OnViewModelSettingsChanged(ViewModelBase? value)
+        {
+            ViewModelSettings = value;
         }
 
         private void NavigateTo(NavigationEventArgs e)
         {
-            ViewModel = RoutesMap.Routes[e.Route];
+            if (e.Route == RouteNames.Settings)
+            {
+                ViewModelSettings = RoutesMap.Routes[e.Route];
+            }
+            else
+            {
+                if (ViewModelSettings != null)
+                {
+                    ViewModelSettings = null;
+                }
+                ViewModel = RoutesMap.Routes[e.Route];
+            }
+            Update();
         }
 
-        public void Update() { }
+        public void Update() 
+        {
+            if (ViewModel is IUpdateViewModel updateViewModel)
+            {
+                updateViewModel.Update();
+            }
+            if (ViewModelSettings is IUpdateViewModel updateViewModelSettings)
+            {
+                updateViewModelSettings.Update();
+            }
+        }
     }
 }

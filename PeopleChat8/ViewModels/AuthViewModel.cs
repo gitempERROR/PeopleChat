@@ -79,6 +79,10 @@ namespace PeopleChat8.ViewModels
             }
         }
 
-        public void Update() { }
+        public void Update() 
+        {
+            Login = "";
+            Password = "";
+        }
     }
 }

@@ -6,23 +6,72 @@
              mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
 			 x:DataType="vm:HomeViewModel"
              x:Class="PeopleChat8.Views.HomeView">
-	<DockPanel VerticalAlignment="Top">
-		<Menu DockPanel.Dock="Top">
+
+	<Grid ColumnDefinitions="360, *" RowDefinitions="50, 150, *">
+		<Border CornerRadius="15 50 0 0"
+			Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+			<Panel>
+				<Border CornerRadius="0 0 0 0" Height="3000" Width="3000">
+					<Border.Background>
+						<RadialGradientBrush GradientOrigin="200% -50%" Center="60% 40%">
+							<GradientStop Color="#FF52a08d" Offset="0.9999999"/>
+							<GradientStop Color="#FF000000" Offset="1"/>
+						</RadialGradientBrush>
+					</Border.Background>
+				</Border>
+				<Border CornerRadius="0 0 0 0" Height="1500" Width="2500">
+					<Border.Background>
+						<RadialGradientBrush GradientOrigin="10% -70%" Center="10% 20%">
+							<GradientStop Color="#FF52a08d" Offset="0.9999999"/>
+							<GradientStop Color="#00000000" Offset="1"/>
+						</RadialGradientBrush>
+					</Border.Background>
+				</Border>
+			</Panel>
+		</Border>
+		<Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#ff494856">
 			<MenuItem Header="Пользователь">
 				<MenuItem Header="Настройки" Command="{Binding NavigateToSettings}"/>
 				<Separator/>
-				<MenuItem Header="Выйти"/>
+				<MenuItem Header="Выйти" Command="{Binding Exit}"/>
 			</MenuItem>
 		</Menu>
-		<Grid ColumnDefinitions="200, *" RowDefinitions="150, *">
+		<Border Grid.Column="0" Grid.Row="1" Background="#ff428E7A" CornerRadius="0 70 0 0"/>
+		<ListBox Grid.Column="0" Grid.Row="2" Classes="LeftMenu" ItemsSource="{Binding Users}" SelectedValue="{Binding SelectedUser}"/>
+		<Border Background="#ff428E7A"
+				CornerRadius="0 50 0 0"
+				Grid.Row="1"
+				Grid.Column="0">
 			<Border Background="#ff494856"
-					CornerRadius="0 15 15 0"
+					CornerRadius="0 50 15 0"
 					BoxShadow="0 0 15 1 Black">
 				<Panel>
-					
 				</Panel>
 			</Border>
-			<ListBox Grid.Column="0" Grid.Row="1" Classes="LeftMenu" ItemsSource="{Binding Users}"/>
-		</Grid>
-	</DockPanel>
+		</Border>
+		<Border Grid.Column="1"
+				Grid.Row="1"
+				Margin="10 0 10 0"
+				Background="#ff494856"
+				CornerRadius="15 15 50 15"
+				BoxShadow="0 0 15 1 Black"
+				IsVisible="{Binding UserSelected}">
+			<StackPanel Orientation="Horizontal">
+				<Border Width="120" Height="120" CornerRadius="100" ClipToBounds="True" Margin="10 10 0 0">
+					<Image Stretch="UniformToFill" Source="{Binding SelectedUser.Image}"/>
+				</Border>
+				<TextBlock Classes="H1"
+						   Text="{Binding Fullname}"
+						   VerticalAlignment="Center"
+						   Margin="10 0 0 0"/>
+			</StackPanel>
+		</Border>
+		<TextBox Classes="Auth"
+				 Grid.Column="1"
+				 Grid.Row="2"
+				 VerticalAlignment="Bottom"
+				 Margin="10"
+				 Height="45"
+				 IsVisible="{Binding UserSelected}"/>
+	</Grid>
 </UserControl>

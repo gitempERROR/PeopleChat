@@ -13,8 +13,9 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<ContentControl Content="{Binding ViewModel}" VerticalAlignment="Stretch">
-			
-	</ContentControl>
+	<Panel>
+		<ContentControl Content="{Binding ViewModel}" VerticalAlignment="Stretch"/>
+		<ContentControl Content="{Binding ViewModelSettings}" VerticalAlignment="Stretch"/>
+	</Panel>
 
 </Window>

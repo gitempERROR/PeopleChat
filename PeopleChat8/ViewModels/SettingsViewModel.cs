@@ -22,9 +22,19 @@ namespace PeopleChat8.ViewModels
         [ObservableProperty]
         private Bitmap? currentUserImage;
 
+        [ObservableProperty]
+        private DateTime currentUserBirthdate;
+
         public void Update()
         {
             CurrentUser = InMemoryUserStorage.Instance.GetUser()!;
+            CurrentUserImage = CurrentUser.Image != null? new Bitmap(new MemoryStream(CurrentUser.Image)) : null;
+            DateOnly birthDate;
+            if (CurrentUser.BirthDate != null)
+            {
+                birthDate = (DateOnly)CurrentUser.BirthDate;
+                CurrentUserBirthdate = birthDate.ToDateTime(TimeOnly.MinValue);
+            }
         }
 
         public void NavigateToHome()
@@ -32,9 +42,17 @@ namespace PeopleChat8.ViewModels
             NavigateToRoute(new NavigationEventArgs(RouteNames.Home));
         }
 
-        public void Save()
+        partial void OnCurrentUserBirthdateChanged(DateTime value)
         {
+            CurrentUserBirthdate = value;
+        }
+
+        public async void Save()
+        {
+            CurrentUser!.BirthDate = CurrentUserBirthdate != null? DateOnly.FromDateTime((DateTime)CurrentUserBirthdate!) : null;
             InMemoryUserStorage.Instance.SaveUser(CurrentUser!);
+            string jwt = InMemoryJwtStorage.Instance.GetToken()!;
+            await UserService.Instance.UpdateUserData(jwt, CurrentUser!);
         }
 
         public async Task Image()

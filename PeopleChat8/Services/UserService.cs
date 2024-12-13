@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Reflection.Metadata;
 
 namespace PeopleChat8.Services
 {
@@ -55,9 +56,31 @@ namespace PeopleChat8.Services
             return deserializedResponse;
         }
 
-        public void UpdateUserData(string Jwt, UserDto userDto) 
+        public async Task<Boolean> UpdateUserData(string Jwt, UserDto userDto) 
         {
-            
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Jwt);
+
+            HttpResponseMessage response;
+            HttpContent content;
+
+            string jsonUserData;
+            string route = HttpRoutes.UserUpdate;
+
+            try
+            {
+                jsonUserData = JsonSerializer.Serialize(userDto);
+                content = new StringContent(jsonUserData, Encoding.UTF8, "application/json");
+
+                ServicePointManager.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;
+                response = await _httpClient.PostAsync(route, content);
+                response.EnsureSuccessStatusCode();
+
+                return true;
+            }
+            catch (Exception) 
+            { 
+                return false; 
+            }
         }
     }
 }
