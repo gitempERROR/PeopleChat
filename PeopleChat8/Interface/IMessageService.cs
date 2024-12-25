@@ -11,6 +11,6 @@ namespace PeopleChat8.Interface
     public interface IMessageService
     {
         public Task<List<MessageDto>> GetMessageList(String Jwt, int currentUserID, int userID);
-        public Task<MessageDto> SendMessage(String Jwt, int currentUserID, int userID, string messageContent);
+        public Task<MessageDto?> SendMessage(String Jwt, int currentUserID, int userID, string messageContent);
     }
 }

@@ -62,9 +62,40 @@ namespace PeopleChat8.Services
             return deserializedResponse;
         }
 
-        public async Task<MessageDto> SendMessage(String Jwt, int currentUserID, int userID, string messageContent)
+        public async Task<MessageDto?> SendMessage(String Jwt, int currentUserID, int userID, string messageContent)
         {
-            return new MessageDto();
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Jwt);
+
+            HttpResponseMessage response;
+            HttpContent content;
+
+            string jsonData;
+            string route = HttpRoutes.MessageSend;
+
+            MessageDto request = new() { 
+                Id = 0, 
+                SenderId = currentUserID, 
+                ReceaverId = userID, 
+                MessageContent = messageContent 
+            };
+
+            try
+            {
+                jsonData = JsonSerializer.Serialize(request);
+                content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                ServicePointManager.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;
+                response = await _httpClient.PostAsync(route, content);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            MessageDto deserializedResponse = await response.Content.ReadFromJsonAsync<MessageDto>() ?? new MessageDto();
+
+            return deserializedResponse;
         }
     }
 }

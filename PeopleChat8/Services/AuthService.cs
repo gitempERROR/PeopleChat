@@ -2,8 +2,6 @@
 using PeopleChat8.Models;
 using PeopleChat8.Resources;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -41,27 +39,26 @@ namespace PeopleChat8.Services
 
         public async Task<bool> Auth(AuthDto loginData, bool register = false)
         {
-            HttpResponseMessage response;
-            HttpContent content;
+            HttpResponseMessage response; // Куда помещается ответ
+            HttpContent content; // Контент запроса
 
-            string jsonLoginData;
-            string route = register ? HttpRoutes.Register : HttpRoutes.Login;
+            string jsonLoginData; // Строка из которой делаем контент
+            string route = register ? HttpRoutes.Register : HttpRoutes.Login; // Я получаю адрес эндпоинта, смотреть в свагере
 
             try
             {
-                ServicePointManager.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;
-                jsonLoginData = JsonSerializer.Serialize(loginData);
-                content = new StringContent(jsonLoginData, Encoding.UTF8, "application/json");
+                jsonLoginData = JsonSerializer.Serialize(loginData); // Сериализую класс с данными логина и пароля, которые называются также как поля необходимые в запросе
+                content = new StringContent(jsonLoginData, Encoding.UTF8, "application/json"); // Создаю json контент
 
-                response = await _httpClient.PostAsync(route, content);
-                response.EnsureSuccessStatusCode();
+                response = await _httpClient.PostAsync(route, content); // Отправляю
+                response.EnsureSuccessStatusCode(); // Проверяю на успех
             }
             catch (Exception)
             {
                 return false;
             }
 
-            AuthResponseDto? deserializedResponse = await response.Content.ReadFromJsonAsync<AuthResponseDto>();
+            AuthResponseDto? deserializedResponse = await response.Content.ReadFromJsonAsync<AuthResponseDto>(); // Десериализую
             if (deserializedResponse != null)
             {
                 jwt = deserializedResponse.AccessToken;

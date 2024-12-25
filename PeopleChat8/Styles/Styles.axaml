@@ -88,10 +88,10 @@
 			<DataTemplate DataType="{x:Type m:MessageElement}">
 				<Border Margin="0" Padding="0" HorizontalAlignment="Left">
 					<StackPanel Orientation="Horizontal">
-						<Border CornerRadius="100" ClipToBounds="True" Height="50" Width="50" Margin="10 0 0 0" VerticalAlignment="Top">
+						<Border CornerRadius="100" ClipToBounds="True" Height="50" Width="50" Margin="10 20 0 0" VerticalAlignment="Top">
 							<Image Stretch="UniformToFill" Source="{Binding Image}"/>
 						</Border>
-						<Border CornerRadius="15 15 15 15" Background="#ff52a08d" Margin="10 0 0 0">
+						<Border CornerRadius="15 15 15 15" Background="#ff52a08d" Margin="10 20 0 0">
 							<TextBlock MaxWidth="500" Text="{Binding MessageData.MessageContent}" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap"/>
 						</Border>
 					</StackPanel>

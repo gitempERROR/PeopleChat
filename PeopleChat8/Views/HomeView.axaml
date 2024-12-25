@@ -27,7 +27,7 @@
 						</RadialGradientBrush>
 					</Border.Background>
 				</Border>
-				<ListBox Classes="Chat" Background="Transparent" ItemsSource="{Binding Messages}" VerticalAlignment="Bottom" Margin="0 0 0 80"/>
+				<ListBox Classes="Chat" Background="Transparent" ItemsSource="{Binding Messages}" VerticalAlignment="Bottom" Margin="0 150 0 80"/>
 			</Panel>
 		</Border>
 		<Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#ff494856">
@@ -73,6 +73,12 @@
 				 VerticalAlignment="Bottom"
 				 Margin="10"
 				 Height="45"
-				 IsVisible="{Binding UserSelected}"/>
+				 IsVisible="{Binding UserSelected}"
+				 Text="{Binding Message}"
+				 AcceptsReturn="True">
+			<TextBox.KeyBindings>
+				<KeyBinding Gesture="Enter" Command="{Binding SendMessage}"/>
+			</TextBox.KeyBindings>
+		</TextBox>
 	</Grid>
 </UserControl>

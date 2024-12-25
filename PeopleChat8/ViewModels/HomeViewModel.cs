@@ -55,6 +55,9 @@ namespace PeopleChat8.ViewModels
         [ObservableProperty]
         private Bitmap? selectedUserImage;
 
+        [ObservableProperty]
+        private string message;
+
         public async void Update()
         {
             string? Jwt = inMemoryJwtStorage.GetToken();
@@ -85,6 +88,34 @@ namespace PeopleChat8.ViewModels
             UpdateMessages();
         }
 
+        public async void SendMessage()
+        {
+            string? Jwt = inMemoryJwtStorage.GetToken();
+            UserDto? userDto = inMemoryUserStorage.GetUser();
+            MessageDto? newMessage;
+            List<MessageElement> newMessages = new();
+            foreach(MessageElement messageElement in Messages)
+            {
+                newMessages.Add(messageElement);
+            }
+            if (Jwt != null && UserSelected && userDto != null)
+            {
+                newMessage = await _messageService.SendMessage(
+                    Jwt,
+                    userDto.Id,
+                    SelectedUser!.UserData.Id,
+                    Message
+                );
+                if (newMessage != null)
+                {
+                    MessageElement newMessageElement = new MessageElement(newMessage, ref currentUserImage);
+                    newMessages.Add(newMessageElement);
+                }
+            }
+            Messages = newMessages;
+            Message = "";
+        }
+
         private async void UpdateMessages()
         {
             string? Jwt = inMemoryJwtStorage.GetToken();
@@ -92,18 +123,18 @@ namespace PeopleChat8.ViewModels
             List<MessageElement> newMessages = new();
             if (Jwt != null && UserSelected && userDto != null)
             {
-                List<MessageDto> messageDtos = await _messageService.GetMessageList(Jwt, userDto.Id, SelectedUser.UserData.Id);
+                List<MessageDto> messageDtos = await _messageService.GetMessageList(Jwt, userDto.Id, SelectedUser!.UserData.Id);
                 foreach (MessageDto messageDto in messageDtos)
                 {
                     if (messageDto.SenderId == userDto.Id)
                     {
-                        MessageElement newMessage = new MessageElement(messageDto, ref currentUserImage);
-                        newMessages.Add(newMessage);
+                        MessageElement newMessageElement = new MessageElement(messageDto, ref currentUserImage);
+                        newMessages.Add(newMessageElement);
                     }
                     else
                     {
-                        MessageElement newMessage = new MessageElement(messageDto, ref selectedUserImage);
-                        newMessages.Add(newMessage);
+                        MessageElement newMessageElement = new MessageElement(messageDto, ref selectedUserImage);
+                        newMessages.Add(newMessageElement);
                     }
                 }
                 Messages = newMessages;
