@@ -3,15 +3,12 @@ using PeopleChat8.Interface;
 using PeopleChat8.Models;
 using PeopleChat8.Resources;
 using PeopleChat8.Services;
-using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
 namespace PeopleChat8.ViewModels
 {
     public partial class AuthViewModel : ViewModelBase, IUpdateViewModel
     {
-        private AuthService? authService = AuthService.Instance;
+        private readonly AuthService? authService = AuthService.Instance;
 
         [ObservableProperty]
         private string login = "";

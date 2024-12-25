@@ -27,6 +27,7 @@
 						</RadialGradientBrush>
 					</Border.Background>
 				</Border>
+				<ListBox Classes="Chat" Background="Transparent" ItemsSource="{Binding Messages}" VerticalAlignment="Bottom" Margin="0 0 0 80"/>
 			</Panel>
 		</Border>
 		<Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#ff494856">

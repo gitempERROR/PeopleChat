@@ -12,6 +12,7 @@ namespace PeopleChat8.ViewModels
     {
         private AuthService authService;
         private UserService userService;
+        private MessageService messageService;
         private InMemoryJwtStorage inMemoryJwtStorage;
         private InMemoryUserStorage inMemoryUserStorage;
         private InMemoryAuthStorage inMemoryAuthStorage;
@@ -20,6 +21,7 @@ namespace PeopleChat8.ViewModels
         {
             authService = AuthService.Instance;
             userService = UserService.Instance;
+            messageService = MessageService.Instance;
             inMemoryJwtStorage = InMemoryJwtStorage.Instance;
             inMemoryUserStorage = InMemoryUserStorage.Instance;
             inMemoryAuthStorage = InMemoryAuthStorage.Instance;

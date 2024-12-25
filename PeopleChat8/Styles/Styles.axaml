@@ -1,7 +1,8 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:vm="using:PeopleChat8.ViewModels"
-        xmlns:local="using:PeopleChat8">
+        xmlns:local="using:PeopleChat8"
+		xmlns:m="using:PeopleChat8.Models">
   <Design.PreviewWith>
     <Border Padding="20">
       <!-- Add Controls for Previewer Here -->
@@ -33,7 +34,7 @@
 	<Style Selector="ListBox.LeftMenu">
 		<Setter Property="Padding" Value="0"/>
 		<Setter Property="ItemTemplate">
-			<DataTemplate DataType="{x:Type vm:MenuElement}">
+			<DataTemplate DataType="{x:Type m:MenuElement}">
 				<Border CornerRadius="0 15 15 0" Background="#ff52a08d" Margin="0" Padding="0" Height="70">
 					<StackPanel Orientation="Horizontal">
 						<Border CornerRadius="100" ClipToBounds="True" Height="50" Width="50" Margin="10 0 0 0">
@@ -79,5 +80,27 @@
 
 	<Style Selector="Button.Transparent:pointerover /template/ ContentPresenter">
 		<Setter Property="Background" Value="#9952a08d"/>
+	</Style>
+
+	<Style Selector="ListBox.Chat">
+		<Setter Property="Padding" Value="0"/>
+		<Setter Property="ItemTemplate">
+			<DataTemplate DataType="{x:Type m:MessageElement}">
+				<Border Margin="0" Padding="0" HorizontalAlignment="Left">
+					<StackPanel Orientation="Horizontal">
+						<Border CornerRadius="100" ClipToBounds="True" Height="50" Width="50" Margin="10 0 0 0" VerticalAlignment="Top">
+							<Image Stretch="UniformToFill" Source="{Binding Image}"/>
+						</Border>
+						<Border CornerRadius="15 15 15 15" Background="#ff52a08d" Margin="10 0 0 0">
+							<TextBlock MaxWidth="500" Text="{Binding MessageData.MessageContent}" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap"/>
+						</Border>
+					</StackPanel>
+				</Border>
+			</DataTemplate>
+		</Setter>
+	</Style>
+
+	<Style Selector="ListBox.Chat /template/ VirtualizingStackPanel">
+		<Setter Property="VerticalAlignment" Value="Bottom"/>
 	</Style>
 </Styles>
