@@ -38,7 +38,7 @@
 			</MenuItem>
 		</Menu>
 		<Border Grid.Column="0" Grid.Row="1" Background="#ff428E7A" CornerRadius="0 70 0 0"/>
-		<ListBox Grid.Column="0" Grid.Row="2" Classes="LeftMenu" ItemsSource="{Binding Users}" SelectedValue="{Binding SelectedUser}"/>
+		<ListBox Grid.Column="0" Grid.Row="2" Classes="LeftMenu" ItemsSource="{Binding DisplayedUsers}" SelectedValue="{Binding SelectedUser}"/>
 		<Border Background="#ff428E7A"
 				CornerRadius="0 50 0 0"
 				Grid.Row="1"
@@ -47,6 +47,16 @@
 					CornerRadius="0 50 15 0"
 					BoxShadow="0 0 15 1 Black">
 				<Panel>
+					<TextBlock Text="Пол" Margin="12 15"/>
+					<ComboBox Classes="Register" Width="150" ItemsSource="{Binding GenderList}" SelectedItem="{Binding Gender}" Height="40" Margin="10 40 0 0"/>
+					<TextBlock Text="Сортировка" Padding="0 15 87 0" HorizontalAlignment="Right"/>
+					<ComboBox Classes="Register" Width="160" ItemsSource="{Binding SortList}" SelectedItem="{Binding Sort}" Height="40" HorizontalAlignment="Right" Margin="0 40 10 0"/>
+					<TextBox Classes="Auth"
+							 Margin="10"
+							 Height="45"
+							 VerticalAlignment="Bottom"
+							 Text="{Binding Filter}">
+					</TextBox>
 				</Panel>
 			</Border>
 		</Border>

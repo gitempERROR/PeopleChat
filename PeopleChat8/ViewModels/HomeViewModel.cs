@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace PeopleChat8.ViewModels
 {
@@ -18,8 +20,11 @@ namespace PeopleChat8.ViewModels
         private readonly MessageService      _messageService     = MessageService.Instance;
         private readonly InMemoryJwtStorage  inMemoryJwtStorage  = InMemoryJwtStorage.Instance;
         private readonly InMemoryUserStorage inMemoryUserStorage = InMemoryUserStorage.Instance;
-
+        
+        private bool isUpdating = false;
+        private bool exited = false;
         private Bitmap? currentUserImage;
+        private int selectedUserId = -1;
 
         public HomeViewModel()
         {
@@ -41,6 +46,9 @@ namespace PeopleChat8.ViewModels
         private List<MenuElement> users;
 
         [ObservableProperty]
+        private List<MenuElement> displayedUsers;
+
+        [ObservableProperty]
         private MenuElement? selectedUser;
 
         [ObservableProperty]
@@ -58,34 +66,125 @@ namespace PeopleChat8.ViewModels
         [ObservableProperty]
         private string message;
 
+        [ObservableProperty]
+        private string filter = "";
+
+        [ObservableProperty]
+        private List<string> genderList = ["Male", "Female", "Нет фильтра"];
+
+        [ObservableProperty]
+        private string gender = "Нет фильтра";
+
+        [ObservableProperty]
+        private List<string> sortList = ["А->Я", "Я->А", "Не сортировать"];
+
+        [ObservableProperty]
+        private string sort = "Не сортировать";
+
+        private async void UpdateUsers(string Jwt)
+        {
+            List<UserDto> userDtos = await _userService.GetUserList(Jwt);
+            Users = userDtos.Select(userDto => new MenuElement(userDto)).ToList();
+            Users = Users.Where(userDto => userDto.UserData.Id != inMemoryUserStorage.GetUser()!.Id).ToList();
+            if (selectedUserId != -1)
+            {
+                SelectedUser = Users.Where(userDto => userDto.UserData.Id == selectedUserId).ToList().FirstOrDefault();
+            }
+        }
+
         public async void Update()
         {
             string? Jwt = inMemoryJwtStorage.GetToken();
             if (Jwt != null)
             {
-                List<UserDto> userDtos = await _userService.GetUserList(Jwt);
-                Users = userDtos.Select(userDto => new MenuElement(userDto)).ToList();
-                Users = Users.Where(userDto => userDto.UserData.Id != inMemoryUserStorage.GetUser()!.Id).ToList();
+                UpdateUsers(Jwt);
             }
 
             UserDto currentUser = inMemoryUserStorage.GetUser()!;
             currentUserImage = currentUser.Image != null ? new Bitmap(new MemoryStream(currentUser.Image)) : null;
+            if (!isUpdating)
+            {
+                UpdateUsersCycle();
+                UpdateMessagesCycle();
+                isUpdating = true;
+            }
+            exited = false;
         }
 
         public void Exit()
         {
             inMemoryJwtStorage.RemoveToken();
             inMemoryUserStorage.RemoveUser();
+            exited = true;
             NavigateToAuth();
+        }
+
+        partial void OnGenderChanged(string value)
+        {
+            Gender = value;
+            ApplyFilters();
+        }
+
+        partial void OnUsersChanged(List<MenuElement> value)
+        {
+            Users = value;
+            ApplyFilters();
         }
 
         partial void OnSelectedUserChanged(MenuElement? value)
         {
-            SelectedUser = value;
-            Fullname = SelectedUser!.UserData.UserFirstname + " " + SelectedUser.UserData.UserLastname;
-            UserSelected = true;
-            SelectedUserImage = SelectedUser?.Image;
-            UpdateMessages();
+            if (value != null)
+            {
+                SelectedUser = value;
+                selectedUserId = SelectedUser.UserData.Id;
+                Fullname = SelectedUser!.UserData.UserFirstname + " " + SelectedUser.UserData.UserLastname;
+                UserSelected = true;
+                SelectedUserImage = SelectedUser?.Image;
+                UpdateMessages();
+                ApplyFilters();
+            }
+        }
+
+        partial void OnFilterChanged(string value)
+        {
+            Filter = value;
+            ApplyFilters();
+        }
+
+        partial void OnSortChanged(string value)
+        {
+            Sort = value;
+            ApplyFilters();
+        }
+
+        private void ApplyFilters()
+        {
+            DisplayedUsers = Users.Where(userDto => (userDto.UserData.UserFirstname + " " + userDto.UserData.UserLastname).Contains(Filter)).ToList();
+            if (Gender != "Нет фильтра")
+            {
+                DisplayedUsers = DisplayedUsers.Where(userDto => userDto.UserData.Gender == Gender).ToList();
+            }
+            if (Sort != "Не сортировать")
+            {
+                switch (Sort)
+                {
+                    case "А->Я":
+                        DisplayedUsers = DisplayedUsers.OrderBy(userDto => userDto.UserData.UserFirstname).ToList();
+                        break;
+                    case "Я->А":
+                        DisplayedUsers = DisplayedUsers.OrderByDescending(userDto => userDto.UserData.UserFirstname).ToList();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            foreach (MenuElement userDto in DisplayedUsers)
+            {
+                if (userDto.UserData.Gender == "")
+                {
+                    userDto.UserData.Gender = "Не указано";
+                }
+            }
         }
 
         public async void SendMessage()
@@ -121,7 +220,7 @@ namespace PeopleChat8.ViewModels
             string? Jwt = inMemoryJwtStorage.GetToken();
             UserDto? userDto = inMemoryUserStorage.GetUser();
             List<MessageElement> newMessages = new();
-            if (Jwt != null && UserSelected && userDto != null)
+            if (Jwt != null && UserSelected && userDto != null && SelectedUser != null)
             {
                 List<MessageDto> messageDtos = await _messageService.GetMessageList(Jwt, userDto.Id, SelectedUser!.UserData.Id);
                 foreach (MessageDto messageDto in messageDtos)
@@ -138,6 +237,36 @@ namespace PeopleChat8.ViewModels
                     }
                 }
                 Messages = newMessages;
+            }
+        }
+
+        private async void UpdateMessagesCycle()
+        {
+            while (true)
+            {
+                UpdateMessages();
+                await Task.Delay(3000);
+                if (exited)
+                {
+                    return;
+                }
+            }
+        }
+
+        private async void UpdateUsersCycle()
+        {
+            while (true)
+            {
+                string Jwt = InMemoryJwtStorage.Instance.GetToken();
+                if (Jwt != null)
+                {
+                    UpdateUsers(Jwt);
+                    await Task.Delay(3000);
+                    if (exited)
+                    {
+                        return;
+                    }
+                }
             }
         }
     }

@@ -84,7 +84,6 @@ namespace PeopleChat8.Services
                 jsonData = JsonSerializer.Serialize(request);
                 content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                ServicePointManager.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;
                 response = await _httpClient.PostAsync(route, content);
                 response.EnsureSuccessStatusCode();
             }
