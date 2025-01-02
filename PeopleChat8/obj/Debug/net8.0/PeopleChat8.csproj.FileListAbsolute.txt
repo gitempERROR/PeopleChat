@@ -674,3 +674,11 @@ D:\41\Fadeev\PeopleChat8\PeopleChat8\PeopleChat8\obj\Debug\net8.0\refint\Avaloni
 D:\41\Fadeev\PeopleChat8\PeopleChat8\PeopleChat8\obj\Debug\net8.0\PeopleCh.F1CFA8F8.Up2Date
 D:\41\Fadeev\PeopleChat8\PeopleChat8\PeopleChat8\obj\Debug\net8.0\PeopleChat8.genruntimeconfig.cache
 D:\41\Fadeev\PeopleChat8\PeopleChat8\PeopleChat8\obj\Debug\net8.0\ref\PeopleChat8.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Programming\Projects\C#\PeopleChat8\PeopleChat8\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

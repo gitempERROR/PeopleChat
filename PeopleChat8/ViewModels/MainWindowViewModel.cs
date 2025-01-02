@@ -10,6 +10,7 @@ namespace PeopleChat8.ViewModels
 {
     public partial class MainWindowViewModel : ViewModelBase, IUpdateViewModel
     {
+        private HubService hubService;
         private AuthService authService;
         private UserService userService;
         private MessageService messageService;
@@ -19,9 +20,11 @@ namespace PeopleChat8.ViewModels
 
         public MainWindowViewModel()
         {
+            hubService = HubService.Instance;
             authService = AuthService.Instance;
             userService = UserService.Instance;
             messageService = MessageService.Instance;
+            
             inMemoryJwtStorage = InMemoryJwtStorage.Instance;
             inMemoryUserStorage = InMemoryUserStorage.Instance;
             inMemoryAuthStorage = InMemoryAuthStorage.Instance;
@@ -34,6 +37,10 @@ namespace PeopleChat8.ViewModels
             foreach (var viewModel in RoutesMap.Routes.Values) 
             {
                 viewModel.Navigate += NavigateTo;
+                if (viewModel is HomeViewModel homeViewModel)
+                {
+                    hubService.messageEvent += homeViewModel.onMessageEvent;
+                }
             }
         }
 

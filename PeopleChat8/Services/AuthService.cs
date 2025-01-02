@@ -66,6 +66,7 @@ namespace PeopleChat8.Services
 
                 userEvent!(new UserEventArgs(CurrentUser));
                 jwtEvent!(new JwtEventArgs(jwt));
+                HubService.Instance.Connect();
                 return true;
             }
 

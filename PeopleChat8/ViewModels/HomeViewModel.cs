@@ -92,6 +92,15 @@ namespace PeopleChat8.ViewModels
             }
         }
 
+        public async void onMessageEvent(MessageEventArgs a)
+        {
+            int idNumber = int.Parse(a.Message);
+            if (idNumber == SelectedUser.UserData.Id)
+            {
+                UpdateMessages();
+            }
+        }
+
         public async void Update()
         {
             string? Jwt = inMemoryJwtStorage.GetToken();
@@ -104,8 +113,6 @@ namespace PeopleChat8.ViewModels
             currentUserImage = currentUser.Image != null ? new Bitmap(new MemoryStream(currentUser.Image)) : null;
             if (!isUpdating)
             {
-                UpdateUsersCycle();
-                UpdateMessagesCycle();
                 isUpdating = true;
             }
             exited = false;
@@ -237,19 +244,6 @@ namespace PeopleChat8.ViewModels
                     }
                 }
                 Messages = newMessages;
-            }
-        }
-
-        private async void UpdateMessagesCycle()
-        {
-            while (true)
-            {
-                UpdateMessages();
-                await Task.Delay(3000);
-                if (exited)
-                {
-                    return;
-                }
             }
         }
 
