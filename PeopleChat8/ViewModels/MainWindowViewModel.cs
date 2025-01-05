@@ -39,7 +39,7 @@ namespace PeopleChat8.ViewModels
                 viewModel.Navigate += NavigateTo;
                 if (viewModel is HomeViewModel homeViewModel)
                 {
-                    hubService.messageEvent += homeViewModel.onMessageEvent;
+                    hubService.messageEvent += homeViewModel.OnMessageEvent;
                 }
             }
         }

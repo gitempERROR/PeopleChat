@@ -44,7 +44,8 @@
 							<TextBlock Text="{Binding UserData.UserFirstname}" VerticalAlignment="Center" Margin="5 0 0 0"/>
 							<TextBlock Text="{Binding UserData.UserLastname}" VerticalAlignment="Center" Margin="5 0 0 0"/>
 						</StackPanel>
-						<TextBlock Text="{Binding UserData.Gender}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5 0 10 0"/>
+						<TextBlock Text="{Binding UserData.Gender}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5 0 30 0"/>
+						<TextBlock Text="{Binding NotificationCount}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5 0 10 0" IsVisible="{Binding Notification}"/>
 					</Panel>
 				</Border>
 			</DataTemplate>

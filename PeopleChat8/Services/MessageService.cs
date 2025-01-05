@@ -31,7 +31,7 @@ namespace PeopleChat8.Services
             }
         }
 
-        public async Task<List<MessageDto>> GetMessageList(String Jwt, int currentUserID, int userID)
+        public async Task<List<MessageDto>> GetMessageList(string Jwt, int currentUserID, int userID)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Jwt);
 
@@ -62,7 +62,7 @@ namespace PeopleChat8.Services
             return deserializedResponse;
         }
 
-        public async Task<MessageDto?> SendMessage(String Jwt, int currentUserID, int userID, string messageContent)
+        public async Task<MessageDto?> SendMessage(string Jwt, int currentUserID, int userID, string messageContent)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Jwt);
 

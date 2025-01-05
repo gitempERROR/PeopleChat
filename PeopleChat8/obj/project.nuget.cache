@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Hr4t0T0BYlI=",
+  "dgSpecHash": "R8R7WaM4rho=",
   "success": true,
   "projectFilePath": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\PeopleChat8.csproj",
   "expectedPackageFiles": [
@@ -85,6 +85,7 @@
     "C:\\Users\\ERROR\\.nuget\\packages\\system.text.encodings.web\\9.0.0\\system.text.encodings.web.9.0.0.nupkg.sha512",
     "C:\\Users\\ERROR\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
     "C:\\Users\\ERROR\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512",
+    "C:\\Users\\ERROR\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
     "C:\\Users\\ERROR\\.nuget\\packages\\tmds.dbus.protocol\\0.16.0\\tmds.dbus.protocol.0.16.0.nupkg.sha512"
   ],
   "logs": []

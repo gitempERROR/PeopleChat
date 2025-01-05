@@ -3,6 +3,70 @@
   "WorkspaceRootPath": "C:\\Programming\\Projects\\C#\\PeopleChat8\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\views\\homeview.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\views\\homeview.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\views\\homeview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\views\\homeview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\interface\\iuserstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\interface\\iuserstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\hubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\hubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\styles\\styles.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\styles\\styles.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\models\\menuelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\models\\menuelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\models\\messageelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\models\\messageelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\models\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\models\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\models\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\models\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\views\\settingsview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\views\\settingsview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
@@ -19,28 +83,12 @@
       "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\views\\homeview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\views\\homeview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\inmemoryuserstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\inmemoryuserstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\inmemoryauthstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\inmemoryauthstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\hubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|solutionrelative:peoplechat8\\services\\hubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99AD26E0-BAE7-4A77-9209-B54C43670129}|PeopleChat8\\PeopleChat8.csproj|c:\\programming\\projects\\c#\\peoplechat8\\peoplechat8\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,6 +139,161 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "HomeView.axaml.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\HomeView.axaml.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Views\\HomeView.axaml.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\HomeView.axaml.cs",
+              "RelativeToolTip": "PeopleChat8\\Views\\HomeView.axaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T02:05:49.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserStorage.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Interface\\IUserStorage.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Interface\\IUserStorage.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Interface\\IUserStorage.cs",
+              "RelativeToolTip": "PeopleChat8\\Interface\\IUserStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T01:02:06.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Interface\\IUserService.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Interface\\IUserService.cs",
+              "RelativeToolTip": "PeopleChat8\\Interface\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T00:55:20.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Styles.axaml",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Styles\\Styles.axaml",
+              "RelativeDocumentMoniker": "PeopleChat8\\Styles\\Styles.axaml",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Styles\\Styles.axaml",
+              "RelativeToolTip": "PeopleChat8\\Styles\\Styles.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T00:53:10.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "PeopleChat8\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T00:49:14.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\UserDto.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Models\\UserDto.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\UserDto.cs",
+              "RelativeToolTip": "PeopleChat8\\Models\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:41:54.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Services\\UserService.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\UserService.cs",
+              "RelativeToolTip": "PeopleChat8\\Services\\UserService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAABBwDcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:51:33.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuElement.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\MenuElement.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Models\\MenuElement.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\MenuElement.cs",
+              "RelativeToolTip": "PeopleChat8\\Models\\MenuElement.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAABBwBsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:17:31.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MessageDto.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\MessageDto.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Models\\MessageDto.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\MessageDto.cs",
+              "RelativeToolTip": "PeopleChat8\\Models\\MessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:17:28.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MessageElement.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\MessageElement.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Models\\MessageElement.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\MessageElement.cs",
+              "RelativeToolTip": "PeopleChat8\\Models\\MessageElement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:17:22.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\AuthDto.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\Models\\AuthDto.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Models\\AuthDto.cs",
+              "RelativeToolTip": "PeopleChat8\\Models\\AuthDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:17:17.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SettingsViewModel.cs",
+              "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\ViewModels\\SettingsViewModel.cs",
+              "RelativeDocumentMoniker": "PeopleChat8\\ViewModels\\SettingsViewModel.cs",
+              "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\ViewModels\\SettingsViewModel.cs",
+              "RelativeToolTip": "PeopleChat8\\ViewModels\\SettingsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:16:58.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "SettingsView.axaml",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\SettingsView.axaml",
               "RelativeDocumentMoniker": "PeopleChat8\\Views\\SettingsView.axaml",
@@ -102,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 17,
               "Title": "RegisterView.axaml",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\RegisterView.axaml",
               "RelativeDocumentMoniker": "PeopleChat8\\Views\\RegisterView.axaml",
@@ -114,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "RegisterUserView.axaml",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\RegisterUserView.axaml",
               "RelativeDocumentMoniker": "PeopleChat8\\Views\\RegisterUserView.axaml",
@@ -126,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "PeopleChat8\\Views\\MainWindow.axaml",
@@ -138,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "HomeView.axaml",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Views\\HomeView.axaml",
               "RelativeDocumentMoniker": "PeopleChat8\\Views\\HomeView.axaml",
@@ -150,33 +353,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\ViewModels\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\ViewModels\\HomeViewModel.cs",
               "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\ViewModels\\HomeViewModel.cs",
               "RelativeToolTip": "PeopleChat8\\ViewModels\\HomeViewModel.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAAoBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAowIAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T15:00:14.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MessageService.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\MessageService.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Services\\MessageService.cs",
               "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\MessageService.cs",
               "RelativeToolTip": "PeopleChat8\\Services\\MessageService.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T15:00:09.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "InMemoryUserStorage.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\InMemoryUserStorage.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Services\\InMemoryUserStorage.cs",
@@ -189,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "InMemoryAuthStorage.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\InMemoryAuthStorage.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Services\\InMemoryAuthStorage.cs",
@@ -202,33 +405,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "HubService.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\HubService.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Services\\HubService.cs",
               "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\HubService.cs",
               "RelativeToolTip": "PeopleChat8\\Services\\HubService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADgAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T15:00:05.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Services\\AuthService.cs",
               "ToolTip": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Services\\AuthService.cs",
               "RelativeToolTip": "PeopleChat8\\Services\\AuthService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T15:00:02.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "UserEventArgs.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Resources\\UserEventArgs.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Resources\\UserEventArgs.cs",
@@ -241,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "RouteMap.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Resources\\RouteMap.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Resources\\RouteMap.cs",
@@ -254,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "LoginEventArgs.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Resources\\LoginEventArgs.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Resources\\LoginEventArgs.cs",
@@ -267,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "JwtEventArgs.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Resources\\JwtEventArgs.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Resources\\JwtEventArgs.cs",
@@ -280,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "Encryption.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Resources\\Encryption.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Resources\\Encryption.cs",
@@ -293,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "HttpRoutes.cs",
               "DocumentMoniker": "C:\\Programming\\Projects\\C#\\PeopleChat8\\PeopleChat8\\Resources\\HttpRoutes.cs",
               "RelativeDocumentMoniker": "PeopleChat8\\Resources\\HttpRoutes.cs",

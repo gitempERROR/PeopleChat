@@ -15,6 +15,7 @@ namespace PeopleChat8.Models
         {
             UserData = userData;
             image = userData.Image != null ? new Bitmap(new MemoryStream(userData.Image)) : null;
+            NotificationCount = userData.NotReadMessages;
         }
 
         [ObservableProperty]
@@ -22,5 +23,24 @@ namespace PeopleChat8.Models
 
         [ObservableProperty]
         private Bitmap? image;
+
+        [ObservableProperty]
+        private bool notification = false;
+
+        [ObservableProperty]
+        private int notificationCount = 0;
+
+        partial void OnNotificationCountChanged(int value)
+        {
+            NotificationCount = value;
+            if (value == 0)
+            {
+                Notification = false;
+            }
+            else
+            {
+                Notification = true;
+            }
+        }
     };
 }

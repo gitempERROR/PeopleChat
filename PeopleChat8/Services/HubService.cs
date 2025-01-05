@@ -28,6 +28,14 @@ namespace PeopleChat8.Services
             }
         }
 
+        public async Task StopConnection()
+        {
+            if (_connection != null)
+            {
+                await _connection.StopAsync();
+            }
+        }
+
         public async Task<bool> Connect()
         {
             InMemoryUserStorage storage = InMemoryUserStorage.Instance;
@@ -57,7 +65,7 @@ namespace PeopleChat8.Services
             }
             finally
             {
-                await _connection.StopAsync();
+                await StopConnection();
             }
         }
     }

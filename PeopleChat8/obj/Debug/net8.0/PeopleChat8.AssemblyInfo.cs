@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PeopleChat8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+524ac2411113cd07d5251351f5b0d045811f5781")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed52e5581604d27d26e29c3482d4b086ed6ac0b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PeopleChat8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PeopleChat8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Reflection.Metadata;
 
 namespace PeopleChat8.Services
 {
@@ -31,25 +32,30 @@ namespace PeopleChat8.Services
             }
         }
 
-        public async Task<List<UserDto>> GetUserList(string Jwt)
+        public async Task<List<UserDto>> GetUserList(string Jwt, int id)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Jwt);
 
             HttpResponseMessage response;
             string route = HttpRoutes.UserList;
 
+
             try
             {
-                ServicePointManager.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;
+                _httpClient.DefaultRequestHeaders.Add("userId", id.ToString()); // Добавляем userId в header
+
                 response = await _httpClient.GetAsync(route);
                 response.EnsureSuccessStatusCode();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return [];
             }
 
-            List<UserDto> deserializedResponse = await response.Content.ReadFromJsonAsync<List<UserDto>>()?? [];
+            List<UserDto> deserializedResponse = await response.Content.ReadFromJsonAsync<List<UserDto>>() ?? [];
+
+            _httpClient.DefaultRequestHeaders.Remove("userId"); // Удаляем header после получения данных
 
             return deserializedResponse;
         }
@@ -68,8 +74,6 @@ namespace PeopleChat8.Services
             {
                 jsonUserData = JsonSerializer.Serialize(userDto);
                 content = new StringContent(jsonUserData, Encoding.UTF8, "application/json");
-
-                ServicePointManager.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;
                 response = await _httpClient.PostAsync(route, content);
                 response.EnsureSuccessStatusCode();
 
