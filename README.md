@@ -71,17 +71,21 @@
 ```
 
 Вид программы после запуска:
+
 ![image](https://github.com/user-attachments/assets/79f96fe5-6e07-40b8-aab5-552c7e4d191d)
 
 Далее необходимо авторизироваться или зарегистрироваться.
 
 Регистрация:
+
 ![image](https://github.com/user-attachments/assets/0e2314c4-fb97-403a-9bce-67a02813bd5a)
 
 Вид главного окна:
+
 ![image](https://github.com/user-attachments/assets/393930bb-bdf8-4230-a73b-49d9b5db204b)
 
 Настройки профиля:
+
 ![image](https://github.com/user-attachments/assets/b21283b3-92d3-44ef-a7da-c579ff1a6642)
 
 
