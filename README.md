@@ -38,7 +38,7 @@
 - **Запуск среды** - Открыть Visual Studio Community 2022
 
 - **Клонирование проекта** - Выбрать клонирование с удаленного репозитория при создании проекта.
-Сслыка для клонирования - https://github.com/gitempERROR/PeopleChat.git
+Ссылка для клонирования - https://github.com/gitempERROR/PeopleChat.git
 - **Запуск проекта** - Запустить проект из Visual Studio Community 2022
 
 - Вид программы после запуска:
